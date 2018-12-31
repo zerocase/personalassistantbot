@@ -7,4 +7,4 @@ func _ready():
 	pass
 
 func _process(delta):
-	$Label.text = str(cubolds_collected)
+	get_node("PlayerChar/Label").text = str(cubolds_collected)

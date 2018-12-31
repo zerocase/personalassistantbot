@@ -21,6 +21,8 @@ move_speed = 200
 
 [node name="Platforms" type="Node" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="Platform" parent="Platforms" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 32, 544 )
@@ -45,46 +47,46 @@ position = Vector2( 384, 416 )
 
 position = Vector2( 768, 288 )
 
-[node name="Platform7" parent="Platforms" index="6" instance=ExtResource( 4 )]
+[node name="Platform9" parent="Platforms" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 352, 96 )
+
+[node name="Platform10" parent="Platforms" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 416, 96 )
+
+[node name="Platform7" parent="Platforms" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 832, 288 )
 
 [node name="CuStacks" type="Node" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="Cubolds4" parent="CuStacks" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 608, 320 )
+position = Vector2( 544, 320 )
 
-[node name="Cubolds5" parent="CuStacks" index="1" instance=ExtResource( 5 )]
+[node name="Cubolds9" parent="CuStacks" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 768, 224 )
+
+[node name="Cubolds10" parent="CuStacks" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 832, 224 )
+
+[node name="Cubolds5" parent="CuStacks" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 32, 352 )
 
-[node name="Cubolds6" parent="CuStacks" index="2" instance=ExtResource( 5 )]
+[node name="Cubolds6" parent="CuStacks" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 207.998, 241.127 )
 rotation = -0.0269148
 
-[node name="Cubolds7" parent="CuStacks" index="3" instance=ExtResource( 5 )]
+[node name="Cubolds7" parent="CuStacks" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 35.8905, 106.032 )
 rotation = -0.0269148
-
-[node name="Label" type="Label" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 

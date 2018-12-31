@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[node name="Cubold" type="Area2D" index="0"]
+[node name="Cubold" type="Area2D"]
 
 editor/display_folded = true
 input_pickable = true
