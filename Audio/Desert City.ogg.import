@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Desert City.ogg-02acf8c68861cce91f586168caabacb8.oggstr"
+
+[deps]
+
+source_file="res://Audio/Desert City.ogg"
+dest_files=[ "res://.import/Desert City.ogg-02acf8c68861cce91f586168caabacb8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
