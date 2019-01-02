@@ -14,42 +14,53 @@ script = ExtResource( 1 )
 
 [node name="PlayerChar" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 96, 448 )
+position = Vector2( 256, 384 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Collision", "Transform", "collision" ]
-gravity = 900
-jump_speed = -500
-move_speed = 200
+gravity = 1500
+jump_speed = -1250
+ACCELERATION = 400
 
 [node name="Platforms" type="Node" parent="." index="1"]
 
 [node name="Platform" parent="Platforms" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( 32, 544 )
+position = Vector2( 32, 768 )
 
 [node name="Platform2" parent="Platforms" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 96, 544 )
+position = Vector2( 224, 768 )
 
 [node name="Platform3" parent="Platforms" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 160, 544 )
+position = Vector2( 416, 768 )
 
-[node name="Platform4" parent="Platforms" index="3" instance=ExtResource( 4 )]
+[node name="Platform8" parent="Platforms" index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 320, 416 )
+position = Vector2( 608, 768 )
 
-[node name="Platform5" parent="Platforms" index="4" instance=ExtResource( 4 )]
+[node name="Platform9" parent="Platforms" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 384, 416 )
+position = Vector2( 800, 768 )
 
-[node name="Platform6" parent="Platforms" index="5" instance=ExtResource( 4 )]
+[node name="Platform10" parent="Platforms" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 768, 288 )
+position = Vector2( 992, 768 )
 
-[node name="Platform7" parent="Platforms" index="6" instance=ExtResource( 4 )]
+[node name="Platform4" parent="Platforms" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( 832, 288 )
+position = Vector2( 992, 576 )
+
+[node name="Platform5" parent="Platforms" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 992, 384 )
+
+[node name="Platform6" parent="Platforms" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 1184, 384 )
+
+[node name="Platform7" parent="Platforms" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 1376, 384 )
 
 [node name="CuStacks" type="Node" parent="." index="2"]
 

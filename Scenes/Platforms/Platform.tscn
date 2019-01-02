@@ -9,6 +9,7 @@ extents = Vector2( 32, 32 )
 
 [node name="Platform" type="StaticBody2D"]
 
+scale = Vector2( 3, 3 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -16,6 +17,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -23,12 +25,12 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 modulate = Color( 0, 0, 0, 1 )
-rotation = -0.00243326
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 
