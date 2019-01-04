@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/thrust.wav-ca16202022e73b96d4f3f495397a1311.sample"
+
+[deps]
+
+source_file="res://Audio/Thrust/thrust.wav"
+dest_files=[ "res://.import/thrust.wav-ca16202022e73b96d4f3f495397a1311.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -2,7 +2,9 @@ extends KinematicBody2D
 export (int) var gravity = 900
 export (int) var jump_speed =-200
 export (int) var ACCELERATION = 100
-
+var loff = preload("res://Sprites/L_off.png")
+var lone = preload("res://Sprites/L_one.png")
+var ltwo = preload("res://Sprites/L_two.png")
 var velocity = Vector2()
 var jumping = false
 var jump_count = 2
@@ -21,9 +23,11 @@ func get_input():
 		if jump_count > MIN_JUMP_COUNT and jump_press:
 			get_owner().cubolds_collected -=1
 			jump_count -=1
+			$AudioStreamPlayer.play()
 			velocity.y = jump_speed
 		if is_on_floor() and not jump_press :
 			jump_count=2
+			$AudioStreamPlayer.stop()
 	if right:
 		velocity.x += ACCELERATION
 	if left:
@@ -36,6 +40,14 @@ func _physics_process(delta):
 	get_input()
 	velocity.y += gravity*delta
 	velocity = move_and_slide(velocity,UP)
+
+func _process(delta):
+	if jump_count == 2:
+		get_node("Sprite/AnyL").set_texture(ltwo)
+	elif jump_count == 1:
+		get_node("Sprite/AnyL").set_texture(lone)
+	else:
+		get_node("Sprite/AnyL").set_texture(loff)
 
 func _player_death():
 	pass
