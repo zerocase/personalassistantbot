@@ -40,6 +40,10 @@ func _physics_process(delta):
 	get_input()
 	velocity.y += gravity*delta
 	velocity = move_and_slide(velocity,UP)
+	if velocity.y > 1:
+		get_node("Sprite/Particles2D").lifetime = 3
+	else:
+		get_node("Sprite/Particles2D").lifetime = 1
 
 func _process(delta):
 	if jump_count == 2:

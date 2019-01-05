@@ -30,51 +30,49 @@ position = Vector2( 32, 768 )
 
 [node name="Platform2" parent="Platforms" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 224, 768 )
+position = Vector2( 128, 768 )
 
 [node name="Platform3" parent="Platforms" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 416, 768 )
+position = Vector2( 224, 768 )
 
 [node name="Platform8" parent="Platforms" index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 608, 768 )
+position = Vector2( 320, 768 )
 
 [node name="Platform9" parent="Platforms" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 800, 768 )
+position = Vector2( 416, 768 )
 
 [node name="Platform10" parent="Platforms" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 992, 768 )
+position = Vector2( 512, 768 )
 
 [node name="Platform4" parent="Platforms" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( 992, 576 )
+position = Vector2( 608, 768 )
 
 [node name="Platform5" parent="Platforms" index="7" instance=ExtResource( 4 )]
 
-position = Vector2( 992, 384 )
+position = Vector2( 704, 768 )
 
 [node name="Platform6" parent="Platforms" index="8" instance=ExtResource( 4 )]
 
-position = Vector2( 1184, 384 )
+position = Vector2( 704, 672 )
 
 [node name="Platform7" parent="Platforms" index="9" instance=ExtResource( 4 )]
 
-position = Vector2( 1376, 384 )
+position = Vector2( 704, 576 )
 
 [node name="CuStacks" type="Node" parent="." index="2"]
 
-editor/display_folded = true
-
 [node name="Cubolds4" parent="CuStacks" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 544, 320 )
+position = Vector2( 416, 576 )
 
 [node name="Cubolds10" parent="CuStacks" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 800, 224 )
+position = Vector2( 704, 416 )
 
 [node name="Cubolds5" parent="CuStacks" index="2" instance=ExtResource( 5 )]
 
@@ -93,7 +91,7 @@ rotation = -0.0269148
 [node name="Theme" type="AudioStreamPlayer" parent="." index="3"]
 
 stream = ExtResource( 6 )
-volume_db = -24.0
+volume_db = -15.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
