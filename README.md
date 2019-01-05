@@ -10,4 +10,4 @@ This game is made in [Godot] and the programming language is gdscript. This is o
 This project has yet to be exported for installation however you can download the source and import it into [Godot].
 
 
-[Godot]: <https://github.com/godotengine/godot>
+[Godot]: <https://github.com/godotengine>
