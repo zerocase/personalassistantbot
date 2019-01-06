@@ -9,7 +9,7 @@ This game is made in [Godot] and the programming language is gdscript. This is o
 ### Installation 
 This project has yet to be exported for installation however you can download the source and import it into [Godot].
 
-#Credits
+# Credits
 "Wind, Realistic, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
 An adaptation of "Daisy Bell" by Harry Dacre
 
