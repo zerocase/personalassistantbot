@@ -17,4 +17,4 @@ An adaptation of "Daisy Bell" which was originally written by Harry Dacre
 
 
 
-[Godot]: <https://github.com/godotengine>
+[Godot]: <https://github.com/godotengine/godot>
