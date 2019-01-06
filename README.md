@@ -12,7 +12,7 @@ This project has yet to be exported for installation however you can download th
 # Credits
 "Wind, Realistic, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
 
-An adaptation of "Daisy Bell" by Harry Dacre
+An adaptation of "Daisy Bell" which was originally written by Harry Dacre
 
 
 
