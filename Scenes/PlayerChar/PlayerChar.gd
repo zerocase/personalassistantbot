@@ -11,8 +11,9 @@ var jump_count = 2
 var pcubolds_collected = 0
 const MIN_JUMP_COUNT = 0
 const UP = Vector2(0,-1)
-func _ready():
-	$AnimationPlayer.play("Float")
+var anim_state = "Float"
+var animation_ended = false
+
 
 func get_input():
 	velocity.x=0
@@ -23,11 +24,11 @@ func get_input():
 		if jump_count > MIN_JUMP_COUNT and jump_press:
 			get_owner().cubolds_collected -=1
 			jump_count -=1
-			$AudioStreamPlayer.play()
+			$thrust.play()
 			velocity.y = jump_speed
 		if is_on_floor() and not jump_press :
 			jump_count=2
-			$AudioStreamPlayer.stop()
+			$thrust.stop()
 	if right:
 		velocity.x += ACCELERATION
 	if left:
@@ -52,6 +53,16 @@ func _process(delta):
 		get_node("Sprite/AnyL").set_texture(lone)
 	else:
 		get_node("Sprite/AnyL").set_texture(loff)
-
+	if is_on_floor() and pcubolds_collected == 0:
+		_player_death()
+	if $AnimationPlayer.get_current_animation() != anim_state:
+		$AnimationPlayer.play(anim_state)
+		if anim_state == "Death" and animation_ended == true:
+			$AnimationPlayer.stop()
 func _player_death():
-	pass
+	get_node("Sprite/Particles2D").hide()
+	get_node("Sprite/AnyL").set_texture(loff)
+	anim_state = "Death"
+
+func death_anim():
+	animation_ended = true

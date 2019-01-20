@@ -1,41 +1,31 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/World.gd" type="Script" id=1]
-[ext_resource path="res://Audio/DaisyBell.wav" type="AudioStream" id=2]
-[ext_resource path="res://Audio/405561__inspectorj__wind-realistic-a.wav" type="AudioStream" id=3]
-[ext_resource path="res://Scenes/Cubolds.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sprites/Collectibles/top.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Collectibles/Bottom.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/PlayerChar/PlayerChar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/PlayerChar/PlayerChar.gd" type="Script" id=8]
-[ext_resource path="res://Tiles/AutoTile.tres" type="TileSet" id=9]
+[ext_resource path="res://Audio/405561__inspectorj__wind-realistic-a.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Cubolds.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Collectibles/top.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Collectibles/Bottom.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/PlayerChar/PlayerChar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/PlayerChar/PlayerChar.gd" type="Script" id=7]
+[ext_resource path="res://Tiles/AutoTile.tres" type="TileSet" id=8]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 
-[node name="Theme" type="AudioStreamPlayer" parent="." index="0"]
+[node name="wind" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 2 )
-volume_db = -10.0
-pitch_scale = 1.0
-autoplay = true
-mix_target = 0
-bus = "Master"
-
-[node name="wind" type="AudioStreamPlayer" parent="." index="1"]
-
-stream = ExtResource( 3 )
 volume_db = -24.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Container" type="Node2D" parent="." index="2"]
+[node name="Container" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
 light_mask = 3
@@ -58,20 +48,20 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder" index="1"]
 
 show_behind_parent = true
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder" index="2"]
 
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder5" type="Area2D" parent="Container" index="1"]
 
@@ -91,18 +81,18 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder5" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder5" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder5" index="1"]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder5" index="2"]
 
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder7" type="Area2D" parent="Container" index="2"]
 
@@ -122,18 +112,18 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder7" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder7" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder7" index="1"]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder7" index="2"]
 
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder8" type="Area2D" parent="Container" index="3"]
 
@@ -153,18 +143,18 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder8" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder8" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder8" index="1"]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder8" index="2"]
 
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder6" type="Area2D" parent="Container" index="4"]
 
@@ -183,23 +173,23 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder6" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder6" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder6" index="1"]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder6" index="2"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder2" type="Area2D" parent="Container" index="5"]
 
 editor/display_folded = true
 show_behind_parent = true
-position = Vector2( -1456, -16 )
+position = Vector2( -1160, -12 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -212,24 +202,24 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder2" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder2" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder2" index="1"]
 
 visible = false
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder2" index="2"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder3" type="Area2D" parent="Container" index="6"]
 
 editor/display_folded = true
 show_behind_parent = true
-position = Vector2( -1280, -16 )
+position = Vector2( -984, -14 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -242,24 +232,24 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder3" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder3" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder3" index="1"]
 
 visible = false
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder3" index="2"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Energy Holder4" type="Area2D" parent="Container" index="7"]
 
 editor/display_folded = true
 show_behind_parent = true
-position = Vector2( -1104, -16 )
+position = Vector2( -802, -12 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -272,32 +262,32 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Cubolds4" parent="Container/Energy Holder4" index="0" instance=ExtResource( 4 )]
+[node name="Cubolds4" parent="Container/Energy Holder4" index="0" instance=ExtResource( 3 )]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Top" type="Sprite" parent="Container/Energy Holder4" index="1"]
 
 visible = false
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Bottom" type="Sprite" parent="Container/Energy Holder4" index="2"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
-[node name="PlayerChar" parent="." index="3" instance=ExtResource( 7 )]
+[node name="PlayerChar" parent="." index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 256, 384 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 gravity = 1500
 jump_speed = -1000
 ACCELERATION = 400
 
-[node name="TileMap" type="TileMap" parent="." index="4"]
+[node name="TileMap" type="TileMap" parent="." index="3"]
 
 mode = 0
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 8 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -312,7 +302,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196584, 0, 196608, 196585, 0, 196609, 196586, 0, 196609, 196587, 0, 196609, 196588, 0, 196609, 196589, 0, 196609, 196590, 0, 196609, 196591, 0, 196609, 196592, 0, 196609, 196593, 0, 196609, 196594, 0, 7, 262130, 0, 65542, 262131, 0, 196610, 327677, 0, 1, 327678, 0, 65536, 327679, 0, 65536, 262144, 0, 2, 393213, 0, 131073, 393214, 0, 196619, 393215, 0, 196619, 327680, 0, 131074, 458749, 0, 131073, 458750, 0, 196619, 458751, 0, 196619, 393216, 0, 131074, 524285, 0, 131073, 524286, 0, 196619, 524287, 0, 196619, 458752, 0, 131074, 589821, 0, 131073, 589822, 0, 196619, 589823, 0, 196619, 524288, 0, 131074, 524290, 0, 1, 524291, 0, 65536, 524292, 0, 65536, 524293, 0, 65536, 524294, 0, 2, 524299, 0, 1, 524300, 0, 65536, 524301, 0, 65536, 524302, 0, 65536, 524303, 0, 65536, 524304, 0, 2, 524314, 0, 1, 524315, 0, 65536, 524316, 0, 65536, 524317, 0, 2, 655357, 0, 131073, 655358, 0, 196619, 655359, 0, 196619, 589824, 0, 131074, 589826, 0, 131073, 589827, 0, 196619, 589828, 0, 196619, 589829, 0, 196619, 589830, 0, 131074, 589835, 0, 131073, 589836, 0, 196619, 589837, 0, 196619, 589838, 0, 196619, 589839, 0, 196619, 589840, 0, 131074, 589850, 0, 65537, 589851, 0, 131072, 589852, 0, 131072, 589853, 0, 65538, 720893, 0, 65537, 720894, 0, 131072, 720895, 0, 131072, 655360, 0, 65538, 655362, 0, 131073, 655363, 0, 196619, 655364, 0, 196619, 655365, 0, 196619, 655366, 0, 131074, 655371, 0, 131073, 655372, 0, 196619, 655373, 0, 196619, 655374, 0, 196619, 655375, 0, 196619, 655376, 0, 131074, 720898, 0, 65537, 720899, 0, 131072, 720900, 0, 131072, 720901, 0, 131072, 720902, 0, 65538, 720907, 0, 65537, 720908, 0, 131072, 720909, 0, 131072, 720910, 0, 131072, 720911, 0, 131072, 720912, 0, 65538, 1441824, 0, 1, 1441825, 0, 65536, 1441826, 0, 65536, 1441827, 0, 65536, 1441828, 0, 2, 1507359, 0, 1, 1507360, 0, 65540, 1507361, 0, 196619, 1507362, 0, 196619, 1507363, 0, 196619, 1507364, 0, 131074, 1572894, 0, 1, 1572895, 0, 65540, 1572896, 0, 196619, 1572897, 0, 196619, 1572898, 0, 196619, 1572899, 0, 196619, 1572900, 0, 131074, 1638430, 0, 65537, 1638431, 0, 131072, 1638432, 0, 131072, 1638433, 0, 131072, 1638434, 0, 131072, 1638435, 0, 131072, 1638436, 0, 65538, 1703957, 0, 1, 1703958, 0, 65536, 1703959, 0, 65536, 1703960, 0, 2, 1769493, 0, 65537, 1769494, 0, 4, 1769495, 0, 3, 1769496, 0, 65538, 1835030, 0, 65537, 1835031, 0, 65538, 2424863, 0, 196608, 2424864, 0, 10, 2424865, 0, 65536, 2424866, 0, 2, 2490400, 0, 65537, 2490401, 0, 131072, 2490402, 0, 65538 )
+tile_data = PoolIntArray( 196584, 0, 196608, 196585, 0, 196609, 196586, 0, 196609, 196587, 0, 196609, 196588, 0, 196609, 196589, 0, 196609, 196590, 0, 196609, 196591, 0, 196609, 196592, 0, 196609, 196593, 0, 196609, 196594, 0, 196609, 196595, 0, 196609, 196596, 0, 196610, 327677, 0, 1, 327678, 0, 65536, 327679, 0, 65536, 262144, 0, 2, 393213, 0, 131073, 393214, 0, 196619, 393215, 0, 196619, 327680, 0, 131074, 458749, 0, 131073, 458750, 0, 196619, 458751, 0, 196619, 393216, 0, 131074, 524285, 0, 131073, 524286, 0, 196619, 524287, 0, 196619, 458752, 0, 131074, 589821, 0, 131073, 589822, 0, 196619, 589823, 0, 196619, 524288, 0, 131074, 524290, 0, 1, 524291, 0, 65536, 524292, 0, 65536, 524293, 0, 65536, 524294, 0, 2, 524299, 0, 1, 524300, 0, 65536, 524301, 0, 65536, 524302, 0, 65536, 524303, 0, 65536, 524304, 0, 2, 524314, 0, 1, 524315, 0, 65536, 524316, 0, 65536, 524317, 0, 2, 655357, 0, 131073, 655358, 0, 196619, 655359, 0, 196619, 589824, 0, 131074, 589826, 0, 131073, 589827, 0, 196619, 589828, 0, 196619, 589829, 0, 196619, 589830, 0, 131074, 589835, 0, 131073, 589836, 0, 196619, 589837, 0, 196619, 589838, 0, 196619, 589839, 0, 196619, 589840, 0, 131074, 589850, 0, 65537, 589851, 0, 131072, 589852, 0, 131072, 589853, 0, 65538, 720893, 0, 65537, 720894, 0, 131072, 720895, 0, 131072, 655360, 0, 65538, 655362, 0, 131073, 655363, 0, 196619, 655364, 0, 196619, 655365, 0, 196619, 655366, 0, 131074, 655371, 0, 131073, 655372, 0, 196619, 655373, 0, 196619, 655374, 0, 196619, 655375, 0, 196619, 655376, 0, 131074, 720898, 0, 65537, 720899, 0, 131072, 720900, 0, 131072, 720901, 0, 131072, 720902, 0, 65538, 720907, 0, 65537, 720908, 0, 131072, 720909, 0, 131072, 720910, 0, 131072, 720911, 0, 131072, 720912, 0, 65538, 1245219, 0, 1, 1245220, 0, 65536, 1245221, 0, 2, 1245224, 0, 1, 1245225, 0, 65536, 1245226, 0, 65536, 1245227, 0, 2, 1310754, 0, 1, 1310755, 0, 65540, 1310756, 0, 3, 1310757, 0, 65538, 1310760, 0, 65537, 1310761, 0, 131072, 1310762, 0, 131072, 1310763, 0, 65538, 1376289, 0, 1, 1376290, 0, 65540, 1376291, 0, 196619, 1376292, 0, 131074, 1441824, 0, 1, 1441825, 0, 65540, 1441826, 0, 196619, 1441827, 0, 196619, 1441828, 0, 131074, 1507359, 0, 1, 1507360, 0, 65540, 1507361, 0, 196619, 1507362, 0, 196619, 1507363, 0, 196619, 1507364, 0, 131074, 1572894, 0, 1, 1572895, 0, 65540, 1572896, 0, 196619, 1572897, 0, 196619, 1572898, 0, 196619, 1572899, 0, 196619, 1572900, 0, 131074, 1638430, 0, 65537, 1638431, 0, 131072, 1638432, 0, 131072, 1638433, 0, 131072, 1638434, 0, 131072, 1638435, 0, 131072, 1638436, 0, 65538, 1703957, 0, 1, 1703958, 0, 65536, 1703959, 0, 65536, 1703960, 0, 2, 1769493, 0, 65537, 1769494, 0, 4, 1769495, 0, 3, 1769496, 0, 65538, 1835030, 0, 65537, 1835031, 0, 65538, 2424863, 0, 196608, 2424864, 0, 10, 2424865, 0, 65536, 2424866, 0, 2, 2490400, 0, 65537, 2490401, 0, 131072, 2490402, 0, 65538 )
 __meta__ = {
 "_edit_lock_": true
 }

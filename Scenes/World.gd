@@ -3,6 +3,7 @@ extends Node
 var cubolds_total = 0
 var cubolds_collected = 2
 
+
 func _ready():
 	pass
 	

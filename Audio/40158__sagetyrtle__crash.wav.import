@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/40158__sagetyrtle__crash.wav-bacc3ccee562ca6094958aead774b569.sample"
+
+[deps]
+
+source_file="res://Audio/40158__sagetyrtle__crash.wav"
+dest_files=[ "res://.import/40158__sagetyrtle__crash.wav-bacc3ccee562ca6094958aead774b569.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
