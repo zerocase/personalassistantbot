@@ -13,7 +13,8 @@ const MIN_JUMP_COUNT = 0
 const UP = Vector2(0,-1)
 var anim_state = "Float"
 var animation_ended = false
-
+var is_dead = false
+var anim_set = false
 
 func get_input():
 	velocity.x=0
@@ -29,10 +30,11 @@ func get_input():
 		if is_on_floor() and not jump_press :
 			jump_count=2
 			$thrust.stop()
-	if right:
-		velocity.x += ACCELERATION
-	if left:
-		velocity.x -= ACCELERATION
+	if is_dead == false:
+		if right:
+			velocity.x += ACCELERATION
+		if left:
+			velocity.x -= ACCELERATION
 
 func _physics_process(delta):
 	if get_owner()!= null:
@@ -42,7 +44,7 @@ func _physics_process(delta):
 	velocity.y += gravity*delta
 	velocity = move_and_slide(velocity,UP)
 	if velocity.y > 1:
-		get_node("Sprite/Particles2D").lifetime = 3
+		get_node("Sprite/Particles2D").lifetime = 5
 	else:
 		get_node("Sprite/Particles2D").lifetime = 1
 
@@ -57,12 +59,11 @@ func _process(delta):
 		_player_death()
 	if $AnimationPlayer.get_current_animation() != anim_state:
 		$AnimationPlayer.play(anim_state)
-		if anim_state == "Death" and animation_ended == true:
-			$AnimationPlayer.stop()
+		print(anim_state)
 func _player_death():
 	get_node("Sprite/Particles2D").hide()
 	get_node("Sprite/AnyL").set_texture(loff)
-	anim_state = "Death"
-
-func death_anim():
-	animation_ended = true
+	is_dead = true
+	if anim_set==false:
+		anim_state = "Death"
+		anim_set = true
