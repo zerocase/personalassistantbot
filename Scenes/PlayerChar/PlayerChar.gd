@@ -14,7 +14,6 @@ const UP = Vector2(0,-1)
 var anim_state = "Float"
 var animation_ended = false
 var is_dead = false
-var anim_set = false
 
 func get_input():
 	velocity.x=0
@@ -61,9 +60,9 @@ func _process(delta):
 		$AnimationPlayer.play(anim_state)
 		print(anim_state)
 func _player_death():
+	if anim_state != "Death":
+		anim_state = "Death"
 	get_node("Sprite/Particles2D").hide()
+	get_node("Sprite/Label").hide()
 	get_node("Sprite/AnyL").set_texture(loff)
 	is_dead = true
-	if anim_set==false:
-		anim_state = "Death"
-		anim_set = true
