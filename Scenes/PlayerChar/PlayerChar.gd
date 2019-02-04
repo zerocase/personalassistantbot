@@ -11,12 +11,15 @@ var jump_count = 2
 var pcubolds_collected = 0
 const MIN_JUMP_COUNT = 0
 const UP = Vector2(0,-1)
-var anim_state = "Float"
-var animation_ended = false
 var is_dead = false
+onready var animation = $AnimationPlayer
+
+func _ready():
+	animation.play("Float")
 
 func get_input():
 	velocity.x=0
+	var changesound = Input.is_action_just_pressed("change_sound")
 	var right = Input.is_action_pressed('ui_right')
 	var left = Input.is_action_pressed('ui_left')
 	var jump_press = Input.is_action_just_pressed('ui_jump')
@@ -56,13 +59,11 @@ func _process(delta):
 		get_node("Sprite/AnyL").set_texture(loff)
 	if is_on_floor() and pcubolds_collected == 0:
 		_player_death()
-	if $AnimationPlayer.get_current_animation() != anim_state:
-		$AnimationPlayer.play(anim_state)
-		print(anim_state)
 func _player_death():
-	if anim_state != "Death":
-		anim_state = "Death"
-	get_node("Sprite/Particles2D").hide()
-	get_node("Sprite/Label").hide()
-	get_node("Sprite/AnyL").set_texture(loff)
-	is_dead = true
+	if not is_dead:
+		get_node("Sprite/Particles2D").hide()
+		get_node("Sprite/Label").hide()
+		get_node("Sprite/AnyL").set_texture(loff)
+		animation.play("Death")
+		$crash.play()
+		is_dead = true

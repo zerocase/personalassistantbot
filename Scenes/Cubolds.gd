@@ -1,5 +1,6 @@
 extends Area2D
 
+#BASE CUBOLD
 export var value = 1
 
 func _ready():
